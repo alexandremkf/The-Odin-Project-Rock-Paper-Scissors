@@ -14,14 +14,14 @@ function getComputerChoice () {
 }
 
 function getHumanChoice () {
-    let humanChoice = prompt("What's your choice?")
+    let humanChoice = prompt("What's your choice? (r for rock, p for paper and s for scissors)")
 
-    if (humanChoice === 'rock') {
-        return humanChoice
-    } else if (humanChoice === 'paper') {
-        return humanChoice
+    if (humanChoice === 'r') {
+        return 'rock'
+    } else if (humanChoice === 'p') {
+        return 'paper'
     } else {
-        return humanChoice
+        return 'scissors'
     }
 }
 
