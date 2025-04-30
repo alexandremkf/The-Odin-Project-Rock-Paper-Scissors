@@ -10,4 +10,18 @@ function getComputerChoice () {
     }
 }
 
+function getHumanChoice () {
+    let humanChoice = prompt("What's your choice?")
+
+    if (humanChoice === 'rock') {
+        return humanChoice
+    } else if (humanChoice === 'paper') {
+        return humanChoice
+    } else {
+        return humanChoice
+    }
+}
+
+console.log(getHumanChoice())
+
 console.log(getComputerChoice())
