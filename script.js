@@ -54,4 +54,17 @@ function playGame() {
     }
 }
 
-playGame()
+document.getElementById("rock").addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("rock", computerChoice);
+  });
+  
+  document.getElementById("paper").addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("paper", computerChoice);
+  });
+  
+  document.getElementById("scissors").addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    playRound("scissors", computerChoice);
+  });
