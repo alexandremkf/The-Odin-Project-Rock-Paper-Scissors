@@ -1,3 +1,5 @@
+const resultDiv = document.getElementById("result");
+
 function getComputerChoice () {
     let computerChoice = Math.floor(Math.random() * 3)
 
@@ -24,23 +26,21 @@ function getHumanChoice () {
 }
 
 function playRound(humanChoice, computerChoice) {
-    console.log("You chose:", humanChoice);
-    console.log("Computer chose:", computerChoice);
+    let message = ''
 
     if (humanChoice === computerChoice) {
-        console.log(`It's a tie! You both chose ${humanChoice}`);
-        return "tie"
+        message = `Empate! Os dois escolheram ${humanChoice}`   
     } else if (
         (humanChoice === "rock" && computerChoice === "scissors") ||
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")
     ) {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`)
-        return "human"
+        message = `Você ganhou! ${humanChoice} vence ${computerChoice}`
     } else {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
-        return "computer"
+        message = `Você perdeu! ${computerChoice} vence ${humanChoice}`
     }
+
+    resultDiv.textContent = message;
 }
 
 function playGame() {
