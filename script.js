@@ -44,24 +44,6 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    let humanScore = 0
-    let computerScore = 0
-
-    for (i = 0; i <= 5; i++) {
-        console.log(`---Round${i}---`)
-        const humanSelection = getHumanChoice()
-        const computerSelection = getComputerChoice()
-        const result = playRound(humanSelection, computerSelection)
-
-        if (result === "human") {
-            humanScore++
-        } else if (result === "computer") {
-            computerScore++
-        }
-
-        console.log(`Score: You ${humanScore} x Computer ${computerScore}`)
-    }
-
     console.log("---Game Over---")
     if (humanScore > computerScore) {
         console.log("🎉 You won the game!");
